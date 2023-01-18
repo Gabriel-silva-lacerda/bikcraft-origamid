@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header h1 {
+    text-align: center;
+    padding: 40px;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+nav ul li:hover {
+    border-color:  #ee2211;
+    text-decoration: none;
+}
+
+.container-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    margin-top: 50px;
+}
+
+.content-1 {
+    display: grid;
+    align-content: center;
+    text-align: end;
+    padding: 40px 30px;
+    background-color: white;
+    position: relative;
+}
+
+.content-1::before {
+    content: "";
+    width: 50px;
+    height: 4px;
+    right: -25px;
+    top: 25px;
+    background-color: #ee2211;
+    position: absolute;
+}
+
+.content-1 h2 {
+    font-size: 2rem;
+}
+
+.content-1 p {
+    padding: 20px 0px;
+    line-height: 25px;
+}
+
+.content-1 button {
+    border: 0px;
+    border-radius: 3px;
+    padding: 15px 30px;
+    background-color: #ee2211;
+    text-transform: uppercase;
+    place-self: end;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.content-1 button a {
+    color: white;
+}
+
+.content-1 button:hover {
+    background-color: rgb(155, 4, 4);
+}
+
+.container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+}
+
+.bike img {
+    width: 100%;
+    height: 100%;
+}
+
+.bikcraft{
+    display: grid;
+    align-self: center;
+    margin-right: 50px;
+    background-image: url("img/onda.svg");
+}
+
+.bikcraft p {
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #c6c6c6;
+    text-align: right;
+}
+
+.list {
+    background-color: white;
+    padding: 40px;
+    max-width: 1000px;
+}
+
+.list ul li:first-child {
+    margin: 0;
+}
+
+.list ul {
+    position: relative;
+}
+
+.list ul li {
+    list-style: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.content-list {
+    position: relative;
+    padding: 20px 20px 30px 60px;
+    border-left: 4px solid #fff;
+}
+
+.content-list:hover {
+    border-left: 4px solid#ee2211;
+}
+
+.content-list p {
+    font-size: 1.25rem;
+    padding-top: 10px;
+}
+
+.content-list:last-child {
+    margin: 0;
+}
+
+.content-list:nth-child(1) {
+    background-color: #f7f7f7;
+}
+
+.content-list:nth-child(3) {
+    background-color: #f7f7f7;
+ }
+
+.eletrica, .velocidade, .rastreador {
+    position: absolute;
+    left: 16px;
+}
+
+footer {
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px 0px;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 994px) {
+    .container-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .bikcraft {
+        padding: 40px;
+        margin: 0px;
+    }
+
+    .bikcraft p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 855px) {
+    .bike img {
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 600px) {
+    .container-1 {
+        grid-template-columns: 1fr;
+    }
+
+    .content-1::before {
+        display: none;
+    }
+
+    .content-1  {
+        text-align: left;
+    }
+
+    .content-1 button {
+        place-self: start;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    .bikcraft p {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 385px) {
+    .bikcraft p {
+        font-size: 2rem;
+    }
+
+    .content-list {
+        position: relative;
+        padding: 15px 10px 20px 50px;
+        border-left: 4px solid #fff;
+    }
+
+    
+    
+    .list p {
+        font-size: .9rem;
+        line-height: 1.3rem;
+    }
+}
